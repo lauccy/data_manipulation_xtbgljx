@@ -37,7 +37,9 @@ sessionInfo()
 #可以用下面的代码一次性解决安装（如果没有的话）和加载
 pacman::p_load(dlookr, palmerpenguins, tidyverse)
 
-# Data diagnosis
+####################################
+# Data quality diagnosis
+## https://choonghyunryu.github.io/dlookr_vignette/diagonosis.html
 overview(penguins)
 overview(penguins) %>% plot()
 diagnose(penguins)
@@ -64,3 +66,14 @@ diagnose(penguins)
 diagnose_outlier(penguins)
 
 plot_outlier(penguins)
+
+
+####################################
+# Exploratory Data Analysis
+## https://choonghyunryu.github.io/dlookr_vignette/EDA.html
+
+
+
+####################################
+# Data Transformation
+## https://choonghyunryu.github.io/dlookr_vignette/transformation.html
