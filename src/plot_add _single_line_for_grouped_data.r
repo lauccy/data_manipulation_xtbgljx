@@ -1,4 +1,4 @@
-### 在20020519_02_Fig2_BCD_outdoorData_analysis.r中有完整代码
+### 在20220519_02_Fig2_BCD_outdoorData_analysis.r中有完整代码
 ### 这里的代码仅为展示如何设置
 
 ################滑行时间
