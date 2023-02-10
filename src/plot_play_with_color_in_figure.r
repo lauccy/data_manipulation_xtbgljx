@@ -28,7 +28,7 @@ scales::show_col(color1)  #直接以图方式展示颜色
 
 
 #示例绘图以展示这些颜色：
-barplot(rnorm(6,mean =10,sd=1),
+barplot(rnorm(6,mean = 10,sd=1),
         col=c('#F3D32C','#AAA26F','#DB520F','#B4470D','#B6A650','#32240C'))
 
 ### 如果是 JPEG格式的图片
@@ -123,7 +123,7 @@ pacman::p_load(ggsci)
 p<-ggplot(iris,aes(Sepal.Length,Sepal.Width,color=Species))+
   geom_point(position ="jitter")+
   geom_smooth(se=F,span=0.8,cex=1.5)+
-  theme_test(base_size =15)+
+  theme_test(base_size = 15)+
   theme(legend.position =c(0.85,0.9),
         legend.title =element_blank())
 p+scale_color_nejm()  #新英格兰风格
@@ -141,3 +141,8 @@ p+scale_color_d3()
 p+scale_color_locuszoom()
 p+scale_color_igv()
 p+scale_color_startrek()
+
+
+
+#### if you want to learn more about colors check
+# How to pick more beautiful colors for your data visualizations https://blog.datawrapper.de/beautifulcolors/
