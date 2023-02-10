@@ -10,6 +10,8 @@
 # 这里举两个例子：
 
 ## 如果是png格式的图片
+library(ggplot2)
+
 #加载R包，未安装先用install.packages("RImagePalette")安装
 pacman::p_load(RImagePalette,png)
 #导入图片：
