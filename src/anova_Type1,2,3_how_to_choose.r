@@ -51,6 +51,7 @@ summary(aov.out1)
 # (lm.out1 = lm(Wt ~ Litter * Mother, data=genotype))
 # summary(lm.out1)
 # anova(lm.out1) ### lm结果与aov结果一致
+
 aov(Wt ~ Mother+Litter, data=genotype) %>% summary()
 
 # change order
@@ -277,7 +278,7 @@ t.test(Stay~Hospital, data = HM)
 library(effsize)
 cohen.d(Stay~Hospital, data = HM)
 ## about Cohen's d https://www.statisticshowto.com/cohens-d/
-## Cohen’s D , or standardized mean difference, measures the effect size of the difference between two means. 
+## Cohen’s d , or standardized mean difference, measures the effect size of the difference between two means. 
 ##### Interprete cohen's d
 ## Small effect = 0.2
 ## Medium Effect = 0.5
@@ -300,7 +301,7 @@ aov(Stay~Hospital*Age, data = HM) %>% anova() # show the full "Analysis of Varia
 aov(Stay~Hospital*Age, data = HM) %>% summary() # show less information compared with anova()
 
 # Age enter model first
-aov(Stay~Age*Hospital, data = HM) %>% anova()
+aov(Stay~Age*Hospital, data = HM) %>% anova() ## hospital not significant anymore
 
 ### Type I by lm
 # Hospital enter model first
@@ -339,6 +340,7 @@ lm(Stay~Age+Hospital, data = HM) %>% Anova(type = 2)
 ### Type III
 # lm(Stay~Age+Hospital, data = HM) %>% summary()
 lm(Stay~Age+Hospital, data = HM) %>% Anova(type = 3) 
+lm(Stay~Age+Hospital, data = HM) %>% check_model() # check model
 
 ### 这里用了 lm来做ANCOVA,实际过程中需要对lm模型进行诊断，此处只是用来学习，暂时不做诊断
 
@@ -415,6 +417,9 @@ Model1 = aov(Stay ~ 1, data=HM)      # no predictors, just an intercept
 Model2 = aov(Stay ~ Hospital, data=HM)
 Model3 = aov(Stay ~ Hospital+Patient, data=HM)
 Model4 = aov(Stay ~ Hospital + Patient +  Patient:Hospital, data=HM)
+anova(Model1, Model2)
+anova(Model1, Model3)
+anova(Model1, Model4)
 anova(Model1, Model2, Model3, Model4)
 
 
