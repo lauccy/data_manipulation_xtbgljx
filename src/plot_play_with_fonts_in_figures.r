@@ -27,7 +27,7 @@ ggplot2::theme_get()
 pacman::p_load(extrafont)
 pacman::p_load(ghostscript)
 pacman::p_load(remotes)
-remotes::install_version("Rttf2pt1", version = "1.3.8")
+remotes::install_version("Rttf2pt1", version = "1.3.8") #
 font_import() #将windows系统中安装的所有字体倒入，花很长时间
 # font_import("D:\\fonts") #如果只想倒入某几个字体可以提前把需要的字体放到指定的文件夹中导入
 loadfonts("win")
