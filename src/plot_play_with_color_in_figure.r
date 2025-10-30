@@ -146,3 +146,46 @@ p+scale_color_startrek()
 
 #### if you want to learn more about colors check
 # How to pick more beautiful colors for your data visualizations https://blog.datawrapper.de/beautifulcolors/
+
+
+### 20231108
+#####  Palette URL: http://paletton.com/#uid=72Y0u0khy-e7yT7cSJTlxtFqRqX 从这个网址活的所需颜色的色号
+
+#Primary color:
+pal.green  <- c("#B6EDCC", "#82D9A5", "#57C182", "#38AA66", "#199A4D")
+
+#Secondary color (1):
+pal.blue   <- c("#B4D8E8", "#7EB5CD", "#5392AD", "#357895", "#1B6787")
+
+#Secondary color (2):
+pal.orange <- c("#FFE3C3", "#FFCF98", "#FFBD73", "#ECA14D", "#D78223")
+
+#Complement color:
+pal.red    <- c("#FFCEC3", "#FFAC98", "#FF8E73", "#EC6C4D", "#D74523") 
+
+pal.red.transparent <- rgb(t(col2rgb(pal.red)), max = 255, alpha = 125/2)
+pal.blue.transparent <- rgb(t(col2rgb(pal.blue)), max = 255, alpha = 125/2)
+pal.orange.transparent <- rgb(t(col2rgb(pal.orange)), max = 255, alpha = 125/2)
+pal.green.transparent <- rgb(t(col2rgb(pal.green)), max = 255, alpha = 125/2)
+
+pal.colourblind <- brewer.pal(n = 12, name = "Paired")
+
+#col.repro.shading <- pal.colourblind[7]
+#col.repro.solid <- pal.colourblind[8]
+
+#col.growth.shading <- pal.colourblind[9] 
+#col.growth.solid <- pal.colourblind[10]
+
+col.repro.shading <- pal.blue[1]
+col.repro.solid <- pal.blue[5]
+
+col.growth.shading <- pal.red[3]
+col.growth.solid <- pal.red[5]
+
+#temperature.colours <- c(rev(pal.blue),pal.red)
+temperature.colours <- c(pal.blue[5],pal.orange[3])
+
+point.axis.label <- 9
+point.LETTERS <- 10
+point.tick.label <- 7
+
